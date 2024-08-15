@@ -3,10 +3,16 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
-    private void FixedUpdate()
+
+    private Vector3 move;
+
+    private void Awake()
     {
-        var NextPosition = transform.position;
-        NextPosition.x += _moveSpeed;
-        transform.position = NextPosition;
+        move = new Vector3(_moveSpeed, 0, 0);
+    }
+
+    private void Update()
+    {
+        transform.Translate(move);
     }
 }
