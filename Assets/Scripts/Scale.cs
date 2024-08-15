@@ -4,7 +4,7 @@ public class Scale : MonoBehaviour
 {
     [SerializeField] private float _scaleSpeed;
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 _newScale;
 
