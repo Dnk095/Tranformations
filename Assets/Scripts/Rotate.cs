@@ -4,7 +4,7 @@ public class Rotate : MonoBehaviour
 {
     [SerializeField] private float _rotateSpeed;
 
-    private void FixedUpdate()
+    private void Update()
     {
         transform.Rotate(0, _rotateSpeed, 0);
     }
